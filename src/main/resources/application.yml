@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: spring2-250828
+
+server:
+  port: 8070
