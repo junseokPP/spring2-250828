@@ -1,5 +1,6 @@
 package com.back;
 
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,7 +17,21 @@ public class AppConfig {
         return new PersonRepository(2);
     }
 
+    @Bean
+    public ApplicationRunner myApplicationRunner3(){
+        return args -> {
+            work1();
+            work2();
+            };
+    }
 
+    public void work2() {
+        System.out.println("work2");
+    }
+
+    public void work1() {
+        System.out.println("work1");
+    }
 
 
 }
